@@ -27,6 +27,7 @@ public class MovingPlatform : MonoBehaviour {
         startPosition = transform.position;
         away = true;
         paused = false;
+        target = endPosition;
     }
 
     // Update is called once per frame
