@@ -6,8 +6,13 @@ public class Platformer2DPlayerController : PhysicsObject {
 
     public float jumpTakeOffSpeed = 5f;
     public float maxSpeed = 7f;
+    public float jumpMinTime = .25f;
     public bool groundJump = true;
     public bool midAirJump = true;
+
+    [SerializeField] 
+    private float timeSinceJump = 0f;
+    private bool jumpReleased = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +24,8 @@ public class Platformer2DPlayerController : PhysicsObject {
 
         Vector3 move = Vector3.zero;
 
+        timeSinceJump += Time.deltaTime;
+
         move.x = Input.GetAxis("Horizontal");
 
         if(grounded) {
@@ -28,8 +35,10 @@ public class Platformer2DPlayerController : PhysicsObject {
             groundJump = false;
         }
 
-        if(Input.GetButtonDown("Jump")) {
+        if(Input.GetButtonDown("Jump") || Input.GetKeyDown("w")) {
             if(groundJump || midAirJump) {
+                timeSinceJump = 0f;
+                jumpReleased = false;
                 velocity.y = jumpTakeOffSpeed;
                 if(groundJump) {
                     groundJump = false;
@@ -37,7 +46,14 @@ public class Platformer2DPlayerController : PhysicsObject {
                     midAirJump = false;
                 }
             }
-        } else if(Input.GetButtonUp("Jump")) {
+        }
+        
+        if(Input.GetButtonUp("Jump") || Input.GetKeyUp("w")) {
+            jumpReleased = true;
+        }
+        
+        if(timeSinceJump >= jumpMinTime && jumpReleased) {
+            jumpReleased = false;
             if(velocity.y > 0f) {
                 velocity.y *= .5f;
             }
