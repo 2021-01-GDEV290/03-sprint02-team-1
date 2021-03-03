@@ -400,7 +400,7 @@ MonoBehaviour:
   gravityModifier: 2
   rb: {fileID: 615946719}
   jumpTakeOffSpeed: 15
-  maxSpeed: 10
+  maxSpeed: 15
   jumpMinTime: 0.1
   groundJump: 1
   midAirJump: 1
@@ -672,7 +672,7 @@ Camera:
   m_GameObject: {fileID: 917820072}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2742079, g: 0.45373496, b: 0.735849, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -690,7 +690,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1364,7 +1364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723317783}
   m_LocalRotation: {x: 0, y: 0, z: -0.19936797, w: 0.97992474}
-  m_LocalPosition: {x: 51.07, y: 17.78, z: 0}
+  m_LocalPosition: {x: 51.144, y: 17.786, z: 0}
   m_LocalScale: {x: 7, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863507579}
