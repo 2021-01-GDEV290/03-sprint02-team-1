@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 14751149309580737}
-  m_Layer: 0
+  - component: {fileID: 3619814919485847826}
+  - component: {fileID: 265924335443922275}
+  m_Layer: 10
   m_Name: Javelin Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &3619814919485847826
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081120378934750653}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 56
+  m_CollisionDetection: 0
+--- !u!114 &265924335443922275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081120378934750653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc54ffbcd63a9414eafef7a61b9e34ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  rb: {fileID: 3619814919485847826}
 --- !u!1 &5646282761995368114
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +77,7 @@ GameObject:
   - component: {fileID: 2171357168100511751}
   - component: {fileID: 33715009208475215}
   - component: {fileID: 4934632901953177562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spear Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +172,7 @@ GameObject:
   - component: {fileID: 9078124492523993778}
   - component: {fileID: 5872732169555837918}
   - component: {fileID: 2984288312829002269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spear Shaft
   m_TagString: Untagged
   m_Icon: {fileID: 0}

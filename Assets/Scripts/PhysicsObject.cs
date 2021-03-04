@@ -57,7 +57,7 @@ public class PhysicsObject : MonoBehaviour
         //ComputeVelocity();
     }
 
-    void Movement(Vector3 move, bool yMovement) {
+    protected virtual void Movement(Vector3 move, bool yMovement) {
         float distance = move.magnitude;
 
         if(distance > minMoveDistance) {
@@ -96,8 +96,6 @@ public class PhysicsObject : MonoBehaviour
 
             rb.position = rb.position + move.normalized * distance;
         }
-
-        
     }
 }
 

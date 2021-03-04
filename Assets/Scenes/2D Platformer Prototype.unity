@@ -418,6 +418,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c50f133c9379634f961cbfb49cf128f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 5081120378934750653, guid: 9aa921a3d1872e345aaf2a5bc3654070, type: 3}
+  throwInterval: 0.2
+  projectileSpeed: 20
+  player: {fileID: 0}
 --- !u!1 &863507578
 GameObject:
   m_ObjectHideFlags: 0
