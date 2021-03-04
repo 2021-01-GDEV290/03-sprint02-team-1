@@ -30,9 +30,6 @@ public class Javelin : PhysicsObject
         // Find the delta from the launchPos to the mousePos3D
         Vector3 launchDirection = -throwPosition - -mousePos3D;
         launchDirection.Normalize();
-
-        transform.position = throwPosition + launchDirection;
-
         launchDirection *= projectileSpeed;
 
         velocity.y = launchDirection.y;
