@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5081120378934750653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 0.2, y: 0.2, z: -0.5}
   m_Children:
   - {fileID: 1869703243184526739}
   - {fileID: 7529834908452234038}
@@ -65,6 +65,11 @@ MonoBehaviour:
   minGroundNormalY: 0.65
   gravityModifier: 1
   rb: {fileID: 3619814919485847826}
+  projectileSpeed: 30
+  rotationSpeed: 1
+  player: {fileID: 1484643114832136502, guid: 33429286de7fc2e419a6ebbaaf9d2a0f, type: 3}
+  minAge: 0
+  throwPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &5646282761995368114
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,13 +96,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646282761995368114}
-  m_LocalRotation: {x: -0.0023109466, y: -0.5016262, z: 0.50162613, w: 0.7047958}
+  m_LocalRotation: {x: 0.25186452, y: -0.8153356, z: -0.30812612, w: -0.42053592}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 14751149309580737}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30, y: -55, z: 55}
+  m_LocalEulerAnglesHint: {x: 225.58499, y: -49.294983, z: 167.494}
 --- !u!33 &2171357168100511751
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -171,7 +176,6 @@ GameObject:
   - component: {fileID: 7529834908452234038}
   - component: {fileID: 9078124492523993778}
   - component: {fileID: 5872732169555837918}
-  - component: {fileID: 2984288312829002269}
   m_Layer: 10
   m_Name: Spear Shaft
   m_TagString: Untagged
@@ -186,13 +190,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9199353486509676765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 14751149309580737}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &9078124492523993778
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -242,17 +246,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2984288312829002269
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9199353486509676765}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
